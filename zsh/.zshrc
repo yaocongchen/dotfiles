@@ -1,0 +1,41 @@
+# Created by newuser for 5.9
+
+# History config
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt SHARE_HISTORY
+
+# alias start
+alias lf="ls |fzf"
+alias ll="ls -al"
+alias llf="ls -al |fzf"
+alias vi="nvim"
+#alias vim="nvim"
+#alias end
+
+#plugins
+source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+#this adds a new line before each command but not the first one
+precmd() { precmd() { echo } }
+#this remove the new line after each clear
+alias clear="precmd() {precmd() {echo }} && clear"
+
+eval "$(starship init zsh)"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/yaocong/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/yaocong/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/yaocong/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/yaocong/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
