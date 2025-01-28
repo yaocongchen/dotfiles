@@ -15,8 +15,9 @@ alias vi="nvim"
 #alias end
 
 #plugins
-source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.config/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 #this adds a new line before each command but not the first one
 precmd() { precmd() { echo } }
