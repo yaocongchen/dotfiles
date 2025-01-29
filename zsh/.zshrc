@@ -23,6 +23,7 @@ source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 precmd() { precmd() { echo } }
 #this remove the new line after each clear
 alias clear="precmd() {precmd() {echo }} && clear"
+# bindkey '\el' clear-screen
 
 eval "$(starship init zsh)"
 
