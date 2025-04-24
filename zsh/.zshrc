@@ -42,3 +42,8 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+export CPLUS_INCLUDE_PATH=/usr/include/c++/14:/usr/include/x86_64-linux-gnu/c++/14
+#cuda
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64
+export PATH=$PATH:/usr/local/cuda/bin
+
