@@ -15,6 +15,14 @@ sudo apt-get install starship
 ```
 
 ## 4. Install font
+```shell
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/Tinos.zip
+sudo apt-get install zip
+unzip Tinos.zip
+mkdir -p ~/.fonts
+cp ~/Tinos/*.ttf ~/.fonts/
+fc-cache -fv
+```
 
 ## 5. Install stow
 ```shell
