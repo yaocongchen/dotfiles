@@ -47,4 +47,13 @@ stow nvim
 stow tmux
 ```
 
-
+# tmux
+## 指令客製化
+| Key | 功能 |
+|-----|-----|
+| Alt + c | 清空 Terminal |
+| ctrl + s |  prefix 鍵 (原 ctrl + b) |
+| ctrl + h| 往左切換 pane |
+| ctrl + j| 往下切換 pane |
+| ctrl + k| 往上切換 pane |
+| ctrl + l| 往右切換 pane |
