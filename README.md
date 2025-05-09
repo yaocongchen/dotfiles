@@ -41,10 +41,7 @@ cd dotfiles
 
 ## 8. stow inter folder
 ```shell
-stow zsh
-stow starship
-stow nvim
-stow tmux
+stow zsh starship nvim tmux
 ```
 
 # tmux
