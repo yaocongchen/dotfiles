@@ -33,7 +33,7 @@ re -rf ~/fonts_download
 
 # 7. Install stow
 apt-get install -y stow
-
+pwd
 cd dotfiles
 
 # 8. Clone this repo (請視情況執行)
