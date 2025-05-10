@@ -1,5 +1,5 @@
 # 1. Update & Upgrade system
-apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade -y && sudo apt-get clean
+apt-get update && apt-get upgrade && apt-get dist-upgrade -y && apt-get clean
 
 # 2. Install zsh
 apt-get install -y zsh
