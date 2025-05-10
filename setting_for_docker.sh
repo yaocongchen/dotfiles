@@ -32,7 +32,7 @@ cd ..
 mkdir -p ~/.fonts
 cp ~/fonts_download/*.ttf ~/.fonts/
 fc-cache -fv
-re -rf fonts_download
+rm -rf fonts_download
 
 # 7. Install stow
 apt-get install -y stow
