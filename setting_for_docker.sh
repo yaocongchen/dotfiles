@@ -21,16 +21,17 @@ tar xzvf nvim-linux-x86_64.tar.gz
 bash ./nvim-linux-x86_64/bin/nvim
 
 # 6. Install font
+# wget
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/Tinos.zip
 unzip Tinos.zip
 mkdir -p ~/.fonts
 cp ~/Tinos/*.ttf ~/.fonts/
 fc-cache -fv
 
-cd dotfiles
-
 # 7. Install stow
 apt-get install -y stow
+
+cd dotfiles
 
 # 8. Clone this repo (請視情況執行)
 # git clone https://github.com/yaocongchen/dotfiles.git
