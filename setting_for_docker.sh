@@ -45,6 +45,10 @@ cd dotfiles
 # 9. Enter the dotfiles folder (請視情況執行)
 # cd dotfiles
 
+stow zsh starship nvim tmux
+
+cd ..
+
 # 10. stow inter folder
 chsh -s $(which zsh)
 
@@ -52,4 +56,3 @@ exec zsh
 
 source ~/.zshrc
 
-stow zsh starship nvim tmux
