@@ -48,6 +48,8 @@ cd dotfiles
 # 10. stow inter folder
 chsh -s $(which zsh)
 
+exec zsh 
+
 source ~/.zshrc
 
 stow zsh starship nvim tmux
