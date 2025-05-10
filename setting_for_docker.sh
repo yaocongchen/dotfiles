@@ -8,24 +8,26 @@ apt-get install -y zsh
 # 3. Install starship
 apt-get install -y starship
 
+# 5. Install tmux
+apt-get install -y tmux
+
+apt-get install -y zip
+
 # 4. Install nvim
 #apt-get install -y neovim
 cd ..
 wget https://github.com/neovim/neovim/releases/download/v0.11.1/nvim-linux-x86_64.tar.gz
 tar xzvf nvim-linux-x86_64.tar.gz
 bash ./nvim-linux-x86_64/bin/nvim
-cd dotfiles
-
-# 5. Install tmux
-apt-get install -y tmux
 
 # 6. Install font
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/Tinos.zip
-apt-get install -y zip
 unzip Tinos.zip
 mkdir -p ~/.fonts
 cp ~/Tinos/*.ttf ~/.fonts/
 fc-cache -fv
+
+cd dotfiles
 
 # 7. Install stow
 apt-get install -y stow
