@@ -1,4 +1,5 @@
 # 1. Update & Upgrade system
+yes '' | add-apt-repository ppa:neovim-ppa/unstable
 add-apt-repository ppa:neovim-ppa/unstable
 apt-get update && apt-get upgrade -y && apt-get dist-upgrade -y && apt-get clean
 
