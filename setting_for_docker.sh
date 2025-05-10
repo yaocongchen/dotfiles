@@ -5,8 +5,10 @@ apt-get install -y wget
 # 2. Install zsh
 apt-get install -y zsh
 
+apt-get install -y curl
+
 # 3. Install starship
-apt-get install -y starship
+curl -sS https://starship.rs/install.sh | sh -s -- -y  #表示將 -y 傳給 install.sh 腳本作為參數，略過互動詢問
 
 # 5. Install tmux
 apt-get install -y tmux
@@ -19,6 +21,7 @@ cd ..
 wget https://github.com/neovim/neovim/releases/download/v0.11.1/nvim-linux-x86_64.tar.gz
 tar xzvf nvim-linux-x86_64.tar.gz
 bash ./nvim-linux-x86_64/bin/nvim
+rm -rf nvim-linux-x86_64.tar.gz
 
 # 6. Install font
 mkdir -p ~/fonts_download
@@ -29,7 +32,7 @@ cd ..
 mkdir -p ~/.fonts
 cp ~/fonts_download/*.ttf ~/.fonts/
 fc-cache -fv
-re -rf ~/fonts_download
+re -rf fonts_download
 
 # 7. Install stow
 apt-get install -y stow
