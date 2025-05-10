@@ -8,8 +8,9 @@ apt-get install -y zsh
 apt-get install -y starship
 
 # 4. Install font
+apt-get install -y wget
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/Tinos.zip
-sudo apt-get install -y zip
+apt-get install -y zip
 unzip Tinos.zip
 mkdir -p ~/.fonts
 cp ~/Tinos/*.ttf ~/.fonts/
