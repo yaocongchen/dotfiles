@@ -38,3 +38,5 @@ apt-get install -y stow
 
 # 10. stow inter folder
 stow zsh starship nvim tmux
+
+source ~/.zshrc
