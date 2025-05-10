@@ -21,12 +21,15 @@ tar xzvf nvim-linux-x86_64.tar.gz
 bash ./nvim-linux-x86_64/bin/nvim
 
 # 6. Install font
-# wget
+mkdir -p ~/fonts_download
+cd ~/fonts_download
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/Tinos.zip
 unzip Tinos.zip
+cd ..
 mkdir -p ~/.fonts
-cp ~/Tinos/*.ttf ~/.fonts/
+cp ~/fonts_download/*.ttf ~/.fonts/
 fc-cache -fv
+re -rf ~/fonts_download
 
 # 7. Install stow
 apt-get install -y stow
