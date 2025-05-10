@@ -20,7 +20,7 @@ apt-get install -y zip
 cd ..
 wget https://github.com/neovim/neovim/releases/download/v0.11.1/nvim-linux-x86_64.tar.gz
 tar xzvf nvim-linux-x86_64.tar.gz
-bash ./nvim-linux-x86_64/bin/nvim
+./nvim-linux-x86_64/bin/nvim
 rm -rf nvim-linux-x86_64.tar.gz
 
 # 6. Install font
