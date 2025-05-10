@@ -1,6 +1,6 @@
 # 1. Update & Upgrade system
+apt-get install -y software-properties-common gnupg curl ca-certificates
 yes '' | add-apt-repository ppa:neovim-ppa/unstable
-add-apt-repository ppa:neovim-ppa/unstable
 apt-get update && apt-get upgrade -y && apt-get dist-upgrade -y && apt-get clean
 
 apt-get install -y wget
