@@ -1,4 +1,5 @@
 # 1. Update & Upgrade system
+add-apt-repository ppa:neovim-ppa/unstable
 apt-get update && apt-get upgrade -y && apt-get dist-upgrade -y && apt-get clean
 
 apt-get install -y wget
@@ -17,11 +18,8 @@ apt-get install -y zip
 
 # 4. Install nvim
 #apt-get install -y neovim
-cd ..
-wget https://github.com/neovim/neovim/releases/download/v0.11.1/nvim-linux-x86_64.tar.gz
-tar xzvf nvim-linux-x86_64.tar.gz
-./nvim-linux-x86_64/bin/nvim
-rm -rf nvim-linux-x86_64.tar.gz
+apt-get install -y neovim
+
 
 # 6. Install font
 mkdir -p ~/fonts_download
