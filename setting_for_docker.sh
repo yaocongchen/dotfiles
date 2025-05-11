@@ -25,7 +25,7 @@ apt-get install -y zip
 # 4. Install nvim
 #apt-get install -y neovim
 apt-get install -y neovim
-apt-get install g++  # nvim 需要 g++ 編譯器
+apt-get install -y g++  # nvim 需要 g++ 編譯器
 
 
 # 6. Install font
