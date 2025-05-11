@@ -21,15 +21,15 @@ export LANG=en_US.UTF-8
 # export LC_ALL=en_US.UTF-8
 
 
-# 重新建立 tmux-256color terminfo，加入 truecolor 欄位，docker 裡的 terminfo 可能不完整
-cat <<EOF > tmux-256color.terminfo
-tmux-256color|tmux with 256 colors and truecolor,
-  use=tmux,
-  setrgbf=\\E[38;2;%p1%d;%p2%d;%p3%dm,
-  setrgbb=\\E[48;2;%p1%d;%p2%d;%p3%dm,
-EOF
+# # 重新建立 tmux-256color terminfo，加入 truecolor 欄位，docker 裡的 terminfo 可能不完整
+# cat <<EOF > tmux-256color.terminfo
+# tmux-256color|tmux with 256 colors and truecolor,
+#   use=tmux,
+#   setrgbf=\\E[38;2;%p1%d;%p2%d;%p3%dm,
+#   setrgbb=\\E[48;2;%p1%d;%p2%d;%p3%dm,
+# EOF
 
-tic -x tmux-256color.terminf
+# tic -x tmux-256color.terminf
 
 apt-get install -y zip
 
