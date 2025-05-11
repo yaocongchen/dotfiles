@@ -1,5 +1,5 @@
 # 1. Update & Upgrade system
-apt-get install -y software-properties-common gnupg curl ca-certificates
+apt-get install -y software-properties-common gnupg curl ca-certificates # 安裝必要的工具,為了添加 PPA
 yes '' | add-apt-repository ppa:neovim-ppa/unstable
 apt-get update && apt-get upgrade -y && apt-get dist-upgrade -y && apt-get clean
 
@@ -14,12 +14,18 @@ curl -sS https://starship.rs/install.sh | sh -s -- -y  #表示將 -y 傳給 inst
 
 # 5. Install tmux
 apt-get install -y tmux
+# Docker 裡的 locale 未正確設置，可能導致某些字元顯示錯誤或亂碼
+apt update && apt install -y locales
+locale-gen en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 apt-get install -y zip
 
 # 4. Install nvim
 #apt-get install -y neovim
 apt-get install -y neovim
+apt-get install g++  # nvim 需要 g++ 編譯器
 
 
 # 6. Install font
