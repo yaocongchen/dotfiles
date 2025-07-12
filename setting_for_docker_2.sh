@@ -45,7 +45,7 @@ apt-get install -y stow
 # git clone https://github.com/yaocongchen/dotfiles.git
 
 # 11. 進入 dotfiles 資料夾 (請視情況執行)
-# cd dotfiles
+cd dotfiles
 
 # 12. stow inter folder
 stow zsh starship nvim tmux
