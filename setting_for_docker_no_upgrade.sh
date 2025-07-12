@@ -27,14 +27,14 @@ locale-gen en_US.UTF-8
 export LANG=en_US.UTF-8
 
 # 8. 安裝字型
-FONT_TMP=~/fonts_download
+FONT_TMP=/root/fonts_download
 mkdir -p "$FONT_TMP"
 cd "$FONT_TMP"
-wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/Tinos.zip
+wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/Tinos.zip /root/fonts_download/Tinos.zip
 unzip -o Tinos.zip
 cd ..
-mkdir -p ~/.fonts
-cp "$FONT_TMP"/*.ttf ~/.fonts/
+mkdir -p /root/.fonts
+cp "$FONT_TMP"/*.ttf /root/.fonts/
 fc-cache -fv
 rm -rf "$FONT_TMP"
 
