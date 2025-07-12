@@ -19,11 +19,14 @@ apt-get install -y neovim
 # 5. Install tmux
 apt-get install -y tmux
 
-# 6. 設定 locale，避免亂碼
+# 6. Install fontconfig
+apt-get install -y fontconfig
+
+# 7. 設定 locale，避免亂碼
 locale-gen en_US.UTF-8
 export LANG=en_US.UTF-8
 
-# 7. 安裝字型
+# 8. 安裝字型
 FONT_TMP=~/fonts_download
 mkdir -p "$FONT_TMP"
 cd "$FONT_TMP"
@@ -35,22 +38,22 @@ cp "$FONT_TMP"/*.ttf ~/.fonts/
 fc-cache -fv
 rm -rf "$FONT_TMP"
 
-# 8. Install stow
+# 9. Install stow
 apt-get install -y stow
 
-# 9. Clone this repo (請視情況執行)
+# 10. Clone this repo (請視情況執行)
 # git clone https://github.com/yaocongchen/dotfiles.git
 
-# 10. 進入 dotfiles 資料夾 (請視情況執行)
+# 11. 進入 dotfiles 資料夾 (請視情況執行)
 # cd dotfiles
 
-# 11. stow inter folder
+# 12. stow inter folder
 stow zsh starship nvim tmux
 
-# 12. 設定 zsh 為預設 shell
+# 13. 設定 zsh 為預設 shell
 if command -v zsh >/dev/null 2>&1; then
   chsh -s "$(which zsh)" || echo "請手動切換預設 shell 為 zsh"
 fi
 
-# 13. 啟動 zsh
+# 14. 啟動 zsh
 exec zsh
