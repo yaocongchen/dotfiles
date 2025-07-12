@@ -27,14 +27,14 @@ locale-gen en_US.UTF-8
 export LANG=en_US.UTF-8
 
 # 8. 安裝字型
-FONT_TMP=/root/fonts_download
+FONT_TMP=~/fonts_download
 mkdir -p "$FONT_TMP"
 cd "$FONT_TMP"
-wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/Tinos.zip /root/fonts_download/Tinos.zip
+wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/Tinos.zip
 unzip -o Tinos.zip
 cd ..
-mkdir -p /root/.fonts
-cp "$FONT_TMP"/*.ttf /root/.fonts/
+mkdir -p ~/.fonts
+cp "$FONT_TMP"/*.ttf ~/.fonts/
 fc-cache -fv
 rm -rf "$FONT_TMP"
 
@@ -45,7 +45,7 @@ apt-get install -y stow
 # git clone https://github.com/yaocongchen/dotfiles.git
 
 # 11. 進入 dotfiles 資料夾 (請視情況執行)
-# cd dotfiles
+cd dotfiles
 
 # 12. stow inter folder
 stow zsh starship nvim tmux
