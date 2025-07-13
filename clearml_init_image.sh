@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-yes '' | add-apt-repository ppa:neovim-ppa/unstable
-
 apt-get update && apt-get install -y \
     build-essential \
     git \
@@ -23,6 +21,9 @@ apt-get update && apt-get install -y \
     neovim \
     fontconfig \
     stow
+
+yes '' | add-apt-repository ppa:neovim-ppa/unstable
+apt-get update && apt-get install -y neovim
 
 # huggingface-cli login
 pip install huggingface_hub
