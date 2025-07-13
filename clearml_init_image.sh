@@ -48,7 +48,7 @@ export LANG=en_US.UTF-8
 FONT_TMP=~/fonts_download
 mkdir -p "$FONT_TMP"
 cd "$FONT_TMP"
-wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/Tinos.zip
+wget -q https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Tinos.zip
 unzip -o Tinos.zip
 cd ..
 mkdir -p ~/.fonts

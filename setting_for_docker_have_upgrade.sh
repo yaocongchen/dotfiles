@@ -42,7 +42,7 @@ apt-get install -y g++  # nvim 需要 g++ 編譯器
 # 6. Install font
 mkdir -p ~/fonts_download
 cd ~/fonts_download
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/Tinos.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/Tinos.zip
 unzip Tinos.zip
 cd ..
 mkdir -p ~/.fonts
