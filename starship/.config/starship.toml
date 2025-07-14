@@ -60,8 +60,8 @@ format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
 
 [conda]
 symbol = '  '
-style = 'bold green'
-format = '[$symbol$environment](dimmed green) '
+style = "bg:#212736 fg:#4CAF50"
+format = '[[$symbol$environment](fg:#4CAF50 bg:#212736)]($style)'
 ignore_base = true
 
 [time]
