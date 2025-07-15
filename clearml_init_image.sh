@@ -20,7 +20,8 @@ apt-get update && apt-get install -y \
     zsh \
     neovim \
     fontconfig \
-    stow
+    stow \
+    fzf
 
 yes '' | add-apt-repository ppa:neovim-ppa/unstable
 apt-get update && apt-get install -y neovim
