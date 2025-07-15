@@ -26,3 +26,6 @@ sudo apt-get install -y stow
 
 # 8. stow inter folder
 stow zsh starship nvim tmux
+
+# 9. Install fzf
+sudo apt-get install -y fzf
