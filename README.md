@@ -44,6 +44,11 @@ cd dotfiles
 stow zsh starship nvim tmux
 ```
 
+## 9. Install fzf
+```shell
+sudo apt-get install fzf
+```
+
 # tmux
 ## 指令客製化
 | Key | 功能 |
