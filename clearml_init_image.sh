@@ -72,6 +72,7 @@ fi
 
 
 echo 'export HF_HOME=/mnt/shared/cache_storage/huggingface' >> ~/.zshrc
+echo 'source ~/.clearmlrc' >> ~/.zshrc
 conda init zsh
 conda config --set changeps1 false
 
