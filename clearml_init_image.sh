@@ -76,4 +76,13 @@ echo 'source ~/.clearmlrc' >> ~/.zshrc
 conda init zsh
 conda config --set changeps1 false
 
+# Exit the default virtual environment
+cat << 'EOF' >> ~/.zshrc
+if command -v conda >/dev/null 2>&1 && [[ -n "$CONDA_PREFIX" ]]; then
+    conda deactivate
+elif [[ -n "$VIRTUAL_ENV" ]]; then
+    deactivate
+fi
+EOF
+
 exec zsh
