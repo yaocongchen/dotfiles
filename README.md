@@ -62,7 +62,13 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 ```shell
 nvm install --lts
 ```
-## 10. stow inter folder
+
+## 10. Install pyright
+```shell
+npm install -g pyright
+```
+
+## 11. stow inter folder
 ```shell
 stow zsh starship nvim tmux
 ```
