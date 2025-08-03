@@ -55,7 +55,7 @@ sudo apt-get install fzf
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 ```
 
-2. 讓 shell 支援 nvm (若有包含於 .zshrc 可以不用做)
+2. 讓 shell 支援 nvm (若有包含於 .zshrc 可以不用做,否則會有重複的問題)
 ```shell
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
