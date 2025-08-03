@@ -23,7 +23,9 @@ apt-get update && apt-get install -y \
     stow \
     fzf \
     ripgrep \
-    fd-find
+    fd-find \
+    lua5.1 \
+    luarocks
 
 yes '' | add-apt-repository ppa:neovim-ppa/unstable
 apt-get update && apt-get install -y neovim
