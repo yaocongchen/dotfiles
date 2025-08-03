@@ -66,11 +66,6 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 nvm install --lts
 ```
 
-## 11. Install pyright
-```shell
-npm install -g pyright
-```
-
 # tmux
 ## 指令客製化
 | Key | 功能 |
