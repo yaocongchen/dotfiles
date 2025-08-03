@@ -39,23 +39,20 @@ git clone https://github.com/yaocongchen/dotfiles.git
 cd dotfiles
 ```
 
-## 8. stow inter folder
-```shell
-stow zsh starship nvim tmux
-```
 
-## 9. Install fzf
+
+## 8. Install fzf
 ```shell
 sudo apt-get install fzf
 ```
 
-## 10. Install nvm
+## 9. Install nvm
 1. 安裝 nvm（Node 版本管理器）
 ```shell
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 ```
 
-2. 讓 shell 支援 nvm (若有包含於 .zshrc 可以不用做,否則會有重複的問題)
+2. 讓 shell 支援 nvm (若 .zshrc 本身已寫可以不用做,否則會有重複的問題)
 ```shell
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
@@ -65,6 +62,11 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 ```shell
 nvm install --lts
 ```
+## 10. stow inter folder
+```shell
+stow zsh starship nvim tmux
+```
+
 
 # tmux
 ## 指令客製化
