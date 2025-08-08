@@ -36,11 +36,6 @@ huggingface-cli login --token YOUR_HUGGINGFACE_TOKEN
 
 echo 'export HF_HOME=/mnt/shared/cache_storage/huggingface' >> ~/.bashrc
 
-# yazi
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-rustup update
-cargo install --locked yazi-fm yazi-cli
-
 # nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 cat << 'EOF' >> ~/.bashrc
@@ -61,6 +56,11 @@ export NVM_DIR="$HOME/.nvm"
 
 # install node
 nvm install --lts
+
+# yazi
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+rustup update
+cargo install --locked yazi-fm yazi-cli
 
 # time zone
 TZ=Asia/Taipei
