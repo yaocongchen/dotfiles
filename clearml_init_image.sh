@@ -46,6 +46,10 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 EOF
 
+# install rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+rustup update
+
 # conda
 conda init bash
 source ~/.bashrc
@@ -58,8 +62,6 @@ export NVM_DIR="$HOME/.nvm"
 nvm install --lts
 
 # install yazi
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-rustup update
 cargo install --locked yazi-fm yazi-cli
 
 # time zone
