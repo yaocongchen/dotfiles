@@ -13,8 +13,9 @@ vim.keymap.set("n", "<C-s>", function()
   vim.notify("✔ Saved!", vim.log.levels.INFO, { title = "File Save" })
 end, { desc = "Save file with notification", noremap = true, silent = true })
 
--- 快捷鍵：Ctrl+Q 關閉視窗
-map("n", "<C-q>", "<cmd>q<cr>", { desc = "Close window", noremap = true, silent = true })
+-- 快捷鍵：Ctrl+c 關閉視窗
+map("n", "<C-c>", "<cmd>q<cr>", { desc = "Close window", noremap = true, silent = true })
 
--- 快捷鍵：Ctrl+Alt+Q 離開全部
-map("n", "<C-A-q>", "<cmd>qa<cr>", { desc = "Quit all", noremap = true, silent = true })
+-- 快捷鍵：Ctrl+Shift+C 離開全部
+map("n", "<C-A-c>", "<cmd>qa<cr>", { desc = "Quit all", noremap = true, silent = true })
+

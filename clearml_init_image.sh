@@ -36,6 +36,11 @@ huggingface-cli login --token YOUR_HUGGINGFACE_TOKEN
 
 echo 'export HF_HOME=/mnt/shared/cache_storage/huggingface' >> ~/.bashrc
 
+# yazi
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+rustup update
+cargo install --locked yazi-fm yazi-cli
+
 # nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 cat << 'EOF' >> ~/.bashrc
@@ -91,7 +96,7 @@ curl -sS https://starship.rs/install.sh | sh -s -- -y
 git clone https://github.com/yaocongchen/dotfiles.git
 cd dotfiles
 
-stow zsh starship nvim tmux
+stow zsh starship nvim tmux yazi
 
 if command -v zsh >/dev/null 2>&1; then
   chsh -s "$(which zsh)" || echo "Please manually switch the default shell to zsh"
