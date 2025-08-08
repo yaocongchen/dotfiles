@@ -27,6 +27,8 @@ apt-get update && apt-get install -y \
     lua5.1 \
     luarocks
 
+apt autoremove -y
+
 yes '' | add-apt-repository ppa:neovim-ppa/unstable
 apt-get update && apt-get install -y neovim
 
@@ -46,9 +48,12 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 EOF
 
-# install rust
+# install rust clearml no autowork
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+source ~/.cargo/env
 rustup update
+# install yazi
+cargo install --locked yazi-fm yazi-cli
 
 # conda
 conda init bash
@@ -60,9 +65,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # install node
 nvm install --lts
-
-# install yazi
-cargo install --locked yazi-fm yazi-cli
 
 # time zone
 TZ=Asia/Taipei
