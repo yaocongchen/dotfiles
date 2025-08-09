@@ -26,6 +26,7 @@ show_always = true
 style = "fg:#e3e5e5 bg:#8CB051"
 format = "[ $path ]($style)"
 truncation_length = 3
+truncate_to_repo = true
 truncation_symbol = "…/"
 
 [directory.substitutions]
