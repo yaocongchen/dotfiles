@@ -1,6 +1,6 @@
 # 使用方法
 ## 使用有 GUI 的作業系統
-1. 先下載 lazyvim 支援的 terminal (如： [Ghostty](https://ghostty.org/download) ) 防止顯色或圖示異常。
+1. 先下載 lazyvim 支援的 terminal (如： [Ghostty](https://ghostty.org/) ) 防止顯色或圖示異常。
 
 2. 下載或是複製 `setting.sh` 的內容。
 接著，
