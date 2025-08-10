@@ -1,91 +1,27 @@
-# dotfiles
-## 1. Update & Upgrade system
+# 使用方法
+## 使用有 GUI 的作業系統
+>先下載 lazyvim 支援的 terminal (如： [Ghostty](https://ghostty.org/download) ) 防止顯色或圖示異常。
+
+下載或是複製 `setting.sh` 的內容。
+接著，
 ```bash
-sudo apt-get update && sudo apt-get upgrade && sudo apt-get dist-upgrade -y  && sudo apt-get clean
+bash setting.sh
+```
+將 zsh 設定為預設的 shell
+```bash
+chsh -s "$(which zsh)"
+```
+最後，重新啟動系統（此步驟為套用設定最乾脆的方法）。
+
+## 使用 docker 的環境
+下載或是複製 `setting_for_docker.sh` 的內容。
+接著，
+```bash
+bash setting_for_docker.sh
 ```
 
-## 2. Install zsh
-```bash
-sudo apt-get install zsh
-```
 
-## 3. Install starship
-```bash
-sudo apt-get install starship
-```
 
-## 4. Install font
-```bash
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/Tinos.zip
-sudo apt-get install zip
-unzip Tinos.zip
-mkdir -p ~/.fonts
-cp ~/Tinos/*.ttf ~/.fonts/
-fc-cache -fv
-```
-
-## 5. Install stow
-```bash
-sudo apt-get install stow
-```
-
-## 6. clone this repo.
-```bash
-git clone https://github.com/yaocongchen/dotfiles.git
-```
-
-## 7. Enter the dotfiles folder
-```bash
-cd dotfiles
-```
-
-## 8. Install neovim
-```bash
-yes '' | add-apt-repository ppa:neovim-ppa/unstable
-apt-get update && apt-get install -y neovim
-```
-
-## 9. Install fzf
-```shell
-sudo apt-get install fzf
-```
-
-## 10. Install nvm
-1. Install nvm (Node Version Manager)
-```bash
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
-```
-
-2. Enable nvm support in the shell (this is not necessary if .zshrc is already written, otherwise there will be duplication issues)
-```bash
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-```
-
-3. Install node (which comes with npm)
-```bash
-nvm install --lts
-```
-
-## 11. Install yazi
-```bash
-# install rust
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-source ~/.cargo/env
-rustup update
-# install yazi
-cargo install --locked yazi-fm yazi-cli
-```
-
-## 12. stow inter folder
-```bash
-stow zsh starship nvim tmux yazi
-```
-
-## 13. autoremove
-```bash
-apt autoremove -y
-```
 
 # tmux
 ## 指令客製化

@@ -18,7 +18,6 @@ apt-get update && apt-get install -y \
     locales \
     g++ \
     zsh \
-    neovim \
     fontconfig \
     stow \
     fzf \
@@ -37,11 +36,11 @@ apt-get update && apt-get install -y neovim
 pip install huggingface_hub
 huggingface-cli login --token YOUR_HUGGINGFACE_TOKEN
 
-echo 'export HF_HOME=/mnt/shared/cache_storage/huggingface' >> ~/.bashrc
+echo 'export HF_HOME=/mnt/shared/cache_storage/huggingface' >>~/.bashrc
 
-# nvm
+# install nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
-cat << 'EOF' >> ~/.bashrc
+cat <<'EOF' >>~/.bashrc
 
 # nvm initialization
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
@@ -49,12 +48,12 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 EOF
 
-# install rust clearml no autowork
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-source ~/.cargo/env
-rustup update
-# install yazi
-cargo install --locked yazi-fm yazi-cli
+# install rust ,but installation took too long so clearml timeout
+# curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+# source ~/.cargo/env
+# rustup update
+# # install yazi
+# cargo install --locked yazi-fm yazi-cli
 
 # conda
 conda init bash
@@ -70,7 +69,7 @@ nvm install --lts
 # time zone
 TZ=Asia/Taipei
 ln -snf /usr/share/zoneinfo/$TZ /etc/localtime
-echo $TZ > /etc/timezone
+echo $TZ >/etc/timezone
 dpkg-reconfigure -f noninteractive tzdata
 
 # set locale
@@ -103,18 +102,19 @@ cd dotfiles
 
 stow zsh starship nvim tmux yazi
 
+# Set Zsh as the default login shell
 if command -v zsh >/dev/null 2>&1; then
-  chsh -s "$(which zsh)" || echo "Please manually switch the default shell to zsh"
+    chsh -s "$(which zsh)" || echo "Please manually switch the default shell to zsh"
 fi
 
-
-echo 'export HF_HOME=/mnt/shared/cache_storage/huggingface' >> ~/.zshrc
-echo 'source ~/.clearmlrc' >> ~/.zshrc
+echo 'export HF_HOME=/mnt/shared/cache_storage/huggingface' >>~/.zshrc
+echo 'source ~/.clearmlrc' >>~/.zshrc
 conda init zsh
+# no show (env name because starship already processed)
 conda config --set changeps1 false
 
 # Exit the default virtual environment
-cat << 'EOF' >> ~/.zshrc
+cat <<'EOF' >>~/.zshrc
 if command -v conda >/dev/null 2>&1 && [[ -n "$CONDA_PREFIX" ]]; then
     conda deactivate
 elif [[ -n "$VIRTUAL_ENV" ]]; then
