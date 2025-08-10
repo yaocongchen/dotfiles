@@ -7,7 +7,7 @@ sudo apt-get install -y \
     git \
     wget \
     curl \
-    vim \
+    wl-clipboard \
     htop \
     unzip \
     nvtop \
@@ -26,7 +26,7 @@ sudo apt-get install -y \
     ripgrep \
     fd-find \
     lua5.1 \
-    luarocks
+    luarocks \
 
 # Install miniconda
 curl -LO https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh

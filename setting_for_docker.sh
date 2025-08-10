@@ -5,7 +5,6 @@ apt-get update && apt-get install -y \
     git \
     wget \
     curl \
-    vim \
     htop \
     unzip \
     nvtop \
