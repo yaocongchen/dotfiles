@@ -49,11 +49,11 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 EOF
 
 # install rust ,but installation took too long so clearml timeout
-# curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-# source ~/.cargo/env
-# rustup update
-# # install yazi
-# cargo install --locked yazi-fm yazi-cli
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+source ~/.cargo/env
+rustup update
+# install yazi
+cargo install --locked yazi-fm yazi-cli
 
 # conda
 conda init bash
