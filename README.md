@@ -39,14 +39,18 @@ git clone https://github.com/yaocongchen/dotfiles.git
 cd dotfiles
 ```
 
+## 8. Install neovim
+```bash
+yes '' | add-apt-repository ppa:neovim-ppa/unstable
+apt-get update && apt-get install -y neovim
+```
 
-
-## 8. Install fzf
+## 9. Install fzf
 ```shell
 sudo apt-get install fzf
 ```
 
-## 9. Install nvm
+## 10. Install nvm
 1. Install nvm (Node Version Manager)
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
@@ -58,12 +62,12 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 ```
 
-1. 安裝 node（會附帶 npm）
+3. Install node (which comes with npm)
 ```bash
 nvm install --lts
 ```
 
-## 10. Install yazi
+## 11. Install yazi
 ```bash
 # install rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -73,12 +77,12 @@ rustup update
 cargo install --locked yazi-fm yazi-cli
 ```
 
-## 11. stow inter folder
+## 12. stow inter folder
 ```bash
 stow zsh starship nvim tmux yazi
 ```
 
-## 12. autoremove
+## 13. autoremove
 ```bash
 apt autoremove -y
 ```
