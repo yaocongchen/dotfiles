@@ -29,6 +29,7 @@ apt-get update && apt-get install -y \
 
 apt autoremove -y
 
+# The reason for doing apt-get update && apt-get install -y before doing this step is that the initialized image PPA is not fully functional.
 yes '' | add-apt-repository ppa:neovim-ppa/unstable
 apt-get update && apt-get install -y neovim
 
