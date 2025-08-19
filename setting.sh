@@ -56,6 +56,9 @@ rustup update
 # Install yazi
 cargo install --locked yazi-fm yazi-cli
 
+# Install lsd
+cargo install lsd
+
 source ~/.bashrc
 
 # load nvm manually

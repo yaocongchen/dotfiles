@@ -54,6 +54,10 @@ rustup update
 # install yazi
 cargo install --locked yazi-fm yazi-cli
 
+# Install lsd
+cargo install lsd
+
+
 # conda
 conda init bash
 source ~/.bashrc
