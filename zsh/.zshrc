@@ -47,10 +47,10 @@ export CPLUS_INCLUDE_PATH=/usr/include/c++/14:/usr/include/x86_64-linux-gnu/c++/
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64
 export PATH=$PATH:/usr/local/cuda/bin
 
+# Set the default editor to nvim
+export EDITOR="nvim"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# Set the default editor to nvim
-export EDITOR="nvim"
