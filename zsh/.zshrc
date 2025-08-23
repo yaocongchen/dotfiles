@@ -7,9 +7,25 @@ SAVEHIST=10000
 setopt SHARE_HISTORY
 
 # alias start
-alias lf="ls |fzf"
-alias ll="ls -al"
-alias llf="ls -al |fzf"
+alias l="ls"
+alias la="ls -a"
+alias ll="ls -l"
+alias lla="ls -la"
+alias lf="ls | fzf"
+alias laf="ls -a | fzf"
+alias llf="ls -l | fzf"
+alias llaf="ls -la | fzf"
+
+alias dl="lsd"
+alias dla="lsd -a"
+alias dll="lsd -l"
+alias dlla="lsd -la"
+alias dlt="lsd --tree"
+alias dlf="lsd --color always --icon always | fzf --ansi"
+alias dlaf="lsd -a --color always --icon always | fzf --ansi"
+alias dllf="lsd -l --color always --icon always | fzf --ansi"
+alias dllaf="lsd -la --color always --icon always | fzf --ansi"
+
 alias vi="nvim"
 #alias vim="nvim"
 #alias end
